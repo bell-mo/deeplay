@@ -10,7 +10,7 @@ public class SecondTask {
 
     public static void solving(int n) {
         Integer[] arr = new Integer[n];
-        Service.fillArray(arr);
+        Service.fillArray(arr, -10, 21);
 
         System.out.println("Source array:");
         Service.printArray(arr);
@@ -39,7 +39,7 @@ public class SecondTask {
         }
 
         // Вывод результатов
-        System.out.println("Наиболее часто встречающееся число(а): " + mostFrequentNumbers);
-        System.out.println("Частота: " + maxFrequency);
+        System.out.println("The most common number(s): " + mostFrequentNumbers);
+        System.out.println("Frequency: " + maxFrequency);
     }
 }

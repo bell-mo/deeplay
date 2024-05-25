@@ -7,7 +7,7 @@ public class FirstTask {
 
     public static void solving(int n) {
         Integer[] arr = new Integer[n];
-        Service.fillArray(arr);
+        Service.fillArray(arr, -10, 21);
 
         System.out.println("Source array:");
         Service.printArray(arr);

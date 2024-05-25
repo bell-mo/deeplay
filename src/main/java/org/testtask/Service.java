@@ -3,10 +3,10 @@ package org.testtask;
 import java.util.Random;
 
 public class Service {
-    public static void fillArray(Integer[] arr) {
+    public static void fillArray(Integer[] arr, int min, int range) {
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(21) - 10; // генерируем случайное число от -10 до 10
+            arr[i] = random.nextInt(range) + min;
         }
     }
 

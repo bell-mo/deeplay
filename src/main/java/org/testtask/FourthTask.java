@@ -7,7 +7,7 @@ import java.util.List;
 public class FourthTask {
     public static void solving(int n, int k) {
         Integer[] arr = new Integer[n];
-        Service.fillArray(arr);
+        Service.fillArray(arr, 1, 14);
 
         System.out.println("Source array:");
         Service.printArray(arr);
@@ -18,7 +18,9 @@ public class FourthTask {
             System.out.println("Separation is impossible.");
         } else {
             for (int i = 0; i < result.size(); i++) {
-                System.out.println("Part " + (i + 1) + ": " + result.get(i));
+                List<Integer> part = result.get(i);
+                int partSum = result.get(i).stream().mapToInt(Integer::intValue).sum();
+                System.out.println("Part " + (i + 1) + ": " + part + ", " + partSum);
             }
         }
     }
