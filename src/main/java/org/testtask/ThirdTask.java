@@ -30,13 +30,10 @@ public class ThirdTask {
                 .count();
 
         if (count1 > count2) {
-            //System.out.println(1);
             return 1;
         } else if (count1 == count2) {
-            //System.out.println(2);
             return 2;
         } else {
-            //System.out.println(3);
             return 3;
         }
     }
@@ -56,9 +53,6 @@ public class ThirdTask {
             if (result == 2) draws++;
             if (result == 3) player2Wins++;
         }
-        System.out.println(player1Wins);
-        System.out.println(player2Wins);
-        System.out.println(draws);
         double player1WinProbability = player1Wins / (double) trials;
         double player2WinProbability = player2Wins / (double) trials;
         double drawProbability = draws / (double) trials;
