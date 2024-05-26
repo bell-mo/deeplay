@@ -9,7 +9,7 @@ public class Main {
         SecondTask.solving(20);
 
         System.out.println("Third task:");
-        ThirdTask.solving(new int[]{1, 2, 2}, new int[]{3, 4, 5}, 50 );
+        ThirdTask.solving(new int[]{1, 2, 2}, new int[]{3, 6, 5}, 50, 1000000);
 
         System.out.println("Fourth task:");
         FourthTask.solving(20, 4);
