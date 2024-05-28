@@ -1,5 +1,7 @@
 package org.testtask;
 
+import org.testtask.dto.SecondTaskResult;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ArrayList;
@@ -15,10 +17,12 @@ public class SecondTask {
         System.out.println("Source array:");
         Service.printArray(arr);
 
-        findMostFrequentNumbers(arr);
+        SecondTaskResult result = findMostFrequentNumbers(arr);
+        System.out.println("The most common number(s): " + result.mostFrequentNumbers());
+        System.out.println("Frequency: " + result.maxFrequency());
     }
 
-    private static void findMostFrequentNumbers(Integer[] array) {
+    public static SecondTaskResult findMostFrequentNumbers(Integer[] array) {
         // Используем HashMap для хранения числа и его частоты
         HashMap<Integer, Integer> frequencyMap = new HashMap<>();
 
@@ -38,8 +42,6 @@ public class SecondTask {
             }
         }
 
-        // Вывод результатов
-        System.out.println("The most common number(s): " + mostFrequentNumbers);
-        System.out.println("Frequency: " + maxFrequency);
+        return new SecondTaskResult(mostFrequentNumbers, maxFrequency);
     }
 }

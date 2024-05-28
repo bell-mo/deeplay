@@ -25,7 +25,7 @@ public class FourthTask {
         }
     }
 
-    private static List<List<Integer>> partition(Integer[] array, int K) {
+    public static List<List<Integer>> partition(Integer[] array, int K) {
         int totalSum = Arrays.stream(array)
                 .mapToInt(Integer::intValue)
                 .sum();
